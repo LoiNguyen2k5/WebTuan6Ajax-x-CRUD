@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang chủ User</title>
+    <style>
+        body { font-family: sans-serif; padding: 2rem; }
+        .container { max-width: 800px; margin: auto; padding: 2rem; background: #fff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        h1 { color: #007bff; }
+        a { color: #dc3545; text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Chào mừng User, <span th:text="${session.loggedInUser.username}"></span>!</h1>
+        <p>Đây là trang dành cho người dùng thông thường.</p>
+        <p><a th:href="@{/logout}">Đăng xuất</a></p>
+    </div>
+</body>
+</html>
